@@ -16,7 +16,7 @@ export const main = handler(async (event) => {
   const params = {
     TableName: Table.Notes.tableName,
     Item: {
-      userId: "123", 
+      userId: event.requestContext.authorizer?.iam.cognitoIdentity.identityId, 
       noteId: uuid.v1(), 
       content: data.content, 
       attachment: data.attachment, 
@@ -40,5 +40,5 @@ export const main = handler(async (event) => {
 
 // curl -X PUT \
 // -H 'Content-Type: application/json' \
-// -d '{"content":"Again In a Brave New World","attachment":"holland99.jpg"}' \
-// https://iakzdwnsq7.execute-api.us-east-1.amazonaws.com/notes/4378944d-912b-4390-84e1-637688f1c9e3
+// -d '{"content":"Fly on your wings","attachment":"likeaneagle.jpg"}' \
+// "https://iakzdwnsq7.execute-api.us-east-1.amazonaws.com/notes/4378944d-912b-4390-84e1-637688f1c9e3"

@@ -6,6 +6,7 @@ export function ApiStack({ stack }: StackContext) {
 
     const api = new Api(stack, "Api", {
         defaults: {
+            authorizer: "iam",
             function: {
                 bind: [table],
             },
@@ -20,7 +21,7 @@ export function ApiStack({ stack }: StackContext) {
     });
 
     stack.addOutputs({
-        ApiEndpoint: api.url
+        ApiEndpoint: api.url,
     });
 
     return {
