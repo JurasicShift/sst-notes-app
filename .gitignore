@@ -13,3 +13,5 @@ node_modules
 
 # local env files
 .env*.local
+STRIPE_PUB_KEY=pk_test_51OoqmjLPBCEznJpW7XpK6ffyHtfanmRoS92oLJcmST3nRePtGYkYecdsjEiqSw7QnKG0aHOSuflvW3n95vZ5y7O800t6I4jfh7
+STRIPE_SEC_KEY=sk_test_51OoqmjLPBCEznJpWcCYtoMmnmks4lRZ2jJfn2kixdTlB4SyP2uf7NUhZpHeBstraTis8M37VlmoXcVigHN6WBlZE00D10U1huT

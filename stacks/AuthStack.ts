@@ -44,3 +44,5 @@ export function AuthStack({ stack, app }: StackContext) {
 
 //  apig-test aws-api-gateway-cli-test --username "crazykiss@aol.com" --password "Mustain97!" --user-pool-id us-east-1_vaQK8Azg6 --app-client-id in7d77bj1c7qa8o2co35k1hqi --cognito-region us-east-1 --identity-pool-id us-east-1:bd727607-7dc9-46a8-90fa-1ab1343bcb3e --invoke-url "https://iakzdwnsq7.execute-api.us-east-1.amazonaws.com/" --api-gateway-region us-east-1 --path-template "notes" --method "POST" --body "{\"content\":\"Jurassic Park\",\"attachment\":\"alansback.jpg\"}"
 
+//  apig-test aws-api-gateway-cli-test --username "crazykiss@aol.com" --password "Mustain97!" --user-pool-id us-east-1_vaQK8Azg6 --app-client-id in7d77bj1c7qa8o2co35k1hqi --cognito-region us-east-1 --identity-pool-id us-east-1:bd727607-7dc9-46a8-90fa-1ab1343bcb3e --invoke-url "https://iakzdwnsq7.execute-api.us-east-1.amazonaws.com/" --api-gateway-region us-east-1 --path-template "billing" --method "POST" --body "{\"source\":\"tok_visa\",\"storage\":21}"
+
