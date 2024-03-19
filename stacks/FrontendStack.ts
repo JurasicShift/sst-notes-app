@@ -7,12 +7,10 @@ export function FrontendStack({ stack, app }: StackContext) {
     const { api } = use(ApiStack);
     const { auth } = use(AuthStack);
     const { bucket } = use(StorageStack);
-
     const site = new StaticSite(stack, "ReactSite", {
         path: "packages/frontend",
         buildCommand: "pnpm run build",
         buildOutput: "dist",
-
         environment: {
             VITE_API_URL: api.url,
             VITE_REGION: app.region,
