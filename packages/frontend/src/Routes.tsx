@@ -16,7 +16,7 @@ export default function Links() {
             <Route path="/login" element={
                 <UnauthenticatedRoute>
                     <Login />
-                </UnauthenticatedRoute>
+                 </UnauthenticatedRoute>
             } />
             <Route path="/signup" element={<UnauthenticatedRoute><Signup /></UnauthenticatedRoute>} />
             <Route path="/notes/new" element={<AuthenticatedRoute><NewNote /></AuthenticatedRoute>} />

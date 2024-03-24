@@ -3,9 +3,9 @@ import handler from "@notes/core/handler";
 import dynamoDb from "@notes/core/dynamodb";
 
 export const main = handler(async (event) => {
-    console.log("hit handler with...")
+    
     const data = JSON.parse(event.body || "{}");
-console.log("...this data ", data);
+
     const params = {
         TableName: Table.Notes.tableName,
         Key: {
@@ -23,7 +23,7 @@ console.log("...this data ", data);
     }
 
     const result = await dynamoDb.update(params);
-    console.log(`ALL_NEW_RESULTS: ${JSON.stringify(result)}`);
+   
     return JSON.stringify({status: true});
 
 })

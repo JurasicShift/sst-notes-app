@@ -9,7 +9,7 @@ export default function AuthenticatedRoute({
 }): ReactElement {
     const { pathname, search } = useLocation();
     const { isAuthenticated } = useAppContext();
-
+    console.log("isAuth:", isAuthenticated, "pathname", pathname, "search:", search);
     if (!isAuthenticated) {
         return <Navigate to={`/login?redirect=${pathname}${search}`} />;
     }

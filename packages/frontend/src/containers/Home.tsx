@@ -34,7 +34,15 @@ export default function Home() {
     }, [isAuthenticated])
 
     function loadNotes() {
-        return API.get("notes", "/notes", {});
+        console.log("HIT LOADNOTES FN");
+        try {
+            const response = API.get("notes", "/notes", {});
+            console.log("response:", response);
+            return response;
+
+        } catch(e) {
+            console.log("API CALL ERROR: ", e);
+        }
     }
 
     function formatDate(str: undefined | string) {

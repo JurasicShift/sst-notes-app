@@ -41,8 +41,8 @@ export default function NewNote() {
 
         try {
             const attachment = file.current ? await s3Upload(file.current) : undefined;
-
-            await createNote({content, attachment});
+            const attachmentURL = typeof attachment === 'string' ? attachment : undefined;
+            await createNote({content, attachmentURL});
             nav("/");
         } catch(e) {
             onError(e);
